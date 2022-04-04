@@ -4,6 +4,8 @@ const counterReducer =(state=0, action) =>{
             return state + action.payload; //aumenta el estado
         case "DECREMENT":
             return state - 1; //reduce el estado
+        case "ADD":
+            return state + 1;
         default:
             return state;
        }
