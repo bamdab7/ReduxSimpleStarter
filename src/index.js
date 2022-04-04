@@ -35,8 +35,11 @@ const counter=(state=0, action )=>{
 let store= createStore(counter);
 
 //display in the console
+store.subscribe(() => console.log(store.getState()))
 
 //Dispatch => manda la accion al reducer, el cual mira que hay que hacer
+store.dispatch(increment());
+store.dispatch(decrement());
 
 ReactDOM.render(
   <React.StrictMode>
